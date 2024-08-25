@@ -83,7 +83,14 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(arr) {
+  for (let i=0; i<arr.length; i++){
+    if (arr.indexOf(arr[i],i+1) !== -1){
+      arr.splice(arr.indexOf(arr[i],i+1),1);
+    }
+  }
+  return arr;
+}
 
 
 
